@@ -21,9 +21,15 @@ class TestUser(unittest.TestCase):
 
     def test_save_user(self):
         '''
-        Method to taste if we can save the user details
-
+        Method to test if we can save the user details
         '''
+
+        def test_delete_user(self):
+            '''
+            Method to test if we can delete a user
+            '''
+        
+
         self.new_user.save_user()
         test_user = User('alex', 'nad', 'alexnad425@gmail.com',
                          '0727719206', '1234')
