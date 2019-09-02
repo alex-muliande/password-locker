@@ -1,6 +1,8 @@
 import string
 import secrets
 import pyperclip
+
+
 class User:
     """
     Class that generates new instances of user
@@ -65,19 +67,16 @@ class Credential:
 
         Credential.credential_list.append(self)
 
-    
     def delete_credentials(self):
 
         Credential.credential_list.remove(self)
 
-
-    def generate_password(self,pass_len = 6):
+    def generate_password(self, pass_len=6):
 
         password_chars = string.ascii_letters + string.digits + string.punctuation
 
         return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
 
-    
     @classmethod
     def find_by_site_name(cls, site_name):
         '''
@@ -88,9 +87,8 @@ class Credential:
 
                 return credential
 
-
     @classmethod
-    def copy_credentials(cls,site_name):
+    def copy_credentials(cls, site_name):
         '''
         Class method that copies a credential's info after the credential's account site is entered
         '''
