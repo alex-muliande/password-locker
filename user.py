@@ -71,7 +71,7 @@ class Credential:
         Credential.credential_list.remove(self)
 
 
-    def generate_password(self,pass_len):
+    def generate_password(self,pass_len = 6):
 
         password_chars = string.ascii_letters + string.digits + string.punctuation
 
@@ -84,7 +84,7 @@ class Credential:
         A method to search for credentials associated with a given account type.
         '''
         for credential in cls.credential_list:
-            if credential.account_type == site_name:
+            if credential.site_name == site_name:
 
                 return credential
 
@@ -94,5 +94,5 @@ class Credential:
         '''
         Class method that copies a credential's info after the credential's account site is entered
         '''
-        found_credential = cls.find_by_account_type(site_name)
+        found_credential = cls.find_by_site_name(site_name)
         return pyperclip.copy(found_credential.account_password)

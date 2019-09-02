@@ -103,9 +103,9 @@ class TestCredential(unittest.TestCase):
         twitter = Credential('alex', 'twitter', 'alex-muliande', '12345')
         twitter.save_credentials()
         found_credential = None
-        for credential in Credential.user_credentials_list:
+        for credential in Credential.credential_list:
                 found_credential = Credential.find_by_site_name(credential.site_name)
-                return pyperclip.copy(found_credential.account_password)
+                return pyperclip.copy(found_credential.password)
         Credential.copy_credentials(self.new_credential.site_name)
         self.assertEqual('12345', pyperclip.paste())
         print(pyperclip.paste())
