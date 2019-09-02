@@ -13,7 +13,7 @@ Alex Muliande.
 
 2.Allows users to input there phone numbers.
 
-<!-- 3.The application allows users to input there passwords and user names on the ocation of login in. -->
+3.The application allows users to input there passwords and user names on the ocation of login in.
 
 
 ## Setup/Installation requirements
@@ -24,4 +24,4 @@ Alex Muliande.
 3.
 
 ## Technologies used
-<!-- *Python -->
+*Python
