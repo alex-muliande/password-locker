@@ -1,6 +1,7 @@
 from user import User
 from user import Credential
 import unittest
+import pyperclip
 
 
 class TestUser(unittest.TestCase):
@@ -81,6 +82,33 @@ class TestCredential(unittest.TestCase):
         twitter.save_credentials()
         twitter.delete_credentials()
         self.assertEqual(len(Credential.credential_list),1)
+
+
+    def test_find_by_site_name(self):
+        '''
+        Test to check if the find_by_account_type method returns the correct credential
+        '''
+        self.new_credential.save_credentials()
+        twitter = Credential('alex', 'twitter', 'alex-muliande', '12345')
+        twitter.save_credentials()
+        credential_found = Credential.find_by_site_name('twitter')
+        self.assertEqual(credential_found,twitter)
+
+
+    def test_copy_credentials(self):
+        '''
+        A funtcion to test to check if the copy a credential method copies the correct credential
+        '''
+        self.new_credential.save_credentials()
+        twitter = Credential('alex', 'twitter', 'alex-muliande', '12345')
+        twitter.save_credentials()
+        found_credential = None
+        for credential in Credential.user_credentials_list:
+                found_credential = Credential.find_by_site_name(credential.site_name)
+                return pyperclip.copy(found_credential.account_password)
+        Credential.copy_credentials(self.new_credential.site_name)
+        self.assertEqual('12345', pyperclip.paste())
+        print(pyperclip.paste())
 
 
 

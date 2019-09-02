@@ -78,3 +78,21 @@ class Credential:
         return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
 
     
+    @classmethod
+    def find_by_site_name(cls, site_name):
+        '''
+        A method to search for credentials associated with a given account type.
+        '''
+        for credential in cls.credential_list:
+            if credential.account_type == site_name:
+
+                return credential
+
+
+    @classmethod
+    def copy_credentials(cls,site_name):
+        '''
+        Class method that copies a credential's info after the credential's account site is entered
+        '''
+        found_credential = cls.find_by_account_type(site_name)
+        return pyperclip.copy(found_credential.account_password)
