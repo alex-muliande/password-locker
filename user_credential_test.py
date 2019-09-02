@@ -3,7 +3,6 @@ from user import Credential
 import unittest
 import pyperclip
 
-
 class TestUser(unittest.TestCase):
     def setUp(self):
         self.new_user = User(
@@ -56,7 +55,6 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.account_name, 'alex-muliande')
         self.assertEqual(self.new_credential.password, '12345')
 
-
 # Testing credentials
 
     def tearDown(self):
@@ -101,7 +99,6 @@ class TestCredential(unittest.TestCase):
         Credential.copy_credentials(self.new_credential.site_name)
         self.assertEqual('12345', pyperclip.paste())
         print(pyperclip.paste())
-
 
 if __name__ == '__main__':
     unittest.main()
