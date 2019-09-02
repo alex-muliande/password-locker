@@ -23,6 +23,11 @@ class User:
         '''
         User.users_list.append(self)
 
+    def delete_user(self):
+        '''
+        Function to delete user information
+        '''
+
 
 class Credential:
     '''

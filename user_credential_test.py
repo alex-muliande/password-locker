@@ -21,7 +21,7 @@ class TestUser(unittest.TestCase):
 
     def test_save_user(self):
         '''
-        Method to taste if we can save the uswer details
+        Method to taste if we can save the user details
 
         '''
         self.new_user.save_user()
