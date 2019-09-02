@@ -3,17 +3,17 @@
 
 ## Description
 we will create an amazing application that will help us manage our passwords and even generate new passwords for us..
-A link to my live page 
+
 
 ## Author
 Alex Muliande.
 ## Behaviour Driven Development BDD 
 ### Functions of the Webapplication
-1. .
+1.The application allows a user to imput there first and last names.
 
-2..
+2.Allows users to input there phone numbers.
 
-3..
+<!-- 3.The application allows users to input there passwords and user names on the ocation of login in. -->
 
 
 ## Setup/Installation requirements
@@ -24,4 +24,4 @@ Alex Muliande.
 3.
 
 ## Technologies used
-*
+<!-- *Python -->
