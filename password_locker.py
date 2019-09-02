@@ -240,7 +240,6 @@ def main():
         else:
             print("I really did'nt get that, please use the short code ")
 
-
 print('\n')
 
 if __name__ == '__main__':

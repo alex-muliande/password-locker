@@ -17,7 +17,7 @@ Alex Muliande.
 
 
 ## Setup/Installation requirements
-1.Clone or download and unzip the repository from github,
+1.Clone or download and unzip the repository from github,https://github.com/alex-muliande/password-locker.git
 
 2.You can use this command (git clone *my link*) to clone the project to your machine if you have git .
 
