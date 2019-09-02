@@ -1,3 +1,6 @@
+import string
+import secrets
+import pyperclip
 class User:
     """
     Class that generates new instances of user
@@ -66,3 +69,12 @@ class Credential:
     def delete_credentials(self):
 
         Credential.credential_list.remove(self)
+
+
+    def generate_password(self,pass_len):
+
+        password_chars = string.ascii_letters + string.digits + string.punctuation
+
+        return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
+
+    
