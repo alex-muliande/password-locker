@@ -24,7 +24,6 @@ class TestUser(unittest.TestCase):
         '''
         Method to test if we can save the user details
         '''
-        
 
         self.new_user.save_user()
         test_user = User('alex', 'nad', 'alexnad425@gmail.com',
@@ -39,16 +38,11 @@ class TestUser(unittest.TestCase):
 
         self.new_user.save_user()
         test_user = User('alex', 'nad', 'alexnad425@gmail.com',
-                            '0727719206', '1234')
+                         '0727719206', '1234')
         test_user.save_user()
 
         test_user.delete_user()
         self.assertEqual(len(User.users_list), 1)
-  
-
-
-    
-            
 
 
 class TestCredential(unittest.TestCase):
@@ -63,8 +57,8 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.password, '12345')
 
 
+# Testing credentials
 
-#Testing credentials
     def tearDown(self):
         Credential.credential_list = []
         User.users_list = []
@@ -73,16 +67,14 @@ class TestCredential(unittest.TestCase):
         self.new_credential.save_credentials()
         twitter = Credential('alex', 'twitter', 'alex-muliande', '12345')
         twitter.save_credentials()
-        self.assertEqual(len(Credential.credential_list),2)
-
+        self.assertEqual(len(Credential.credential_list), 2)
 
     def test_delete_credentials(self):
         self.new_credential.save_credentials()
         twitter = Credential('alex', 'twitter', 'alex-muliande', '12345')
         twitter.save_credentials()
         twitter.delete_credentials()
-        self.assertEqual(len(Credential.credential_list),1)
-
+        self.assertEqual(len(Credential.credential_list), 1)
 
     def test_find_by_site_name(self):
         '''
@@ -92,8 +84,7 @@ class TestCredential(unittest.TestCase):
         twitter = Credential('alex', 'twitter', 'alex-muliande', '12345')
         twitter.save_credentials()
         credential_found = Credential.find_by_site_name('twitter')
-        self.assertEqual(credential_found,twitter)
-
+        self.assertEqual(credential_found, twitter)
 
     def test_copy_credentials(self):
         '''
@@ -104,12 +95,12 @@ class TestCredential(unittest.TestCase):
         twitter.save_credentials()
         found_credential = None
         for credential in Credential.credential_list:
-                found_credential = Credential.find_by_site_name(credential.site_name)
-                return pyperclip.copy(found_credential.password)
+            found_credential = Credential.find_by_site_name(
+                credential.site_name)
+            return pyperclip.copy(found_credential.password)
         Credential.copy_credentials(self.new_credential.site_name)
         self.assertEqual('12345', pyperclip.paste())
         print(pyperclip.paste())
-
 
 
 if __name__ == '__main__':

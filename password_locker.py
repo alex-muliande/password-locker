@@ -193,7 +193,6 @@ def main():
                                 print("Sorry I didn\'t get that. Please try again")
 
                         # return at_password
-                        
 
                         save_credentials(create_credential(
                             user_name, site_name, account_name, password))
