@@ -27,6 +27,7 @@ class User:
         '''
         Function to delete user information
         '''
+        User.users_list.remove(self)
 
 
 class Credential:
@@ -56,3 +57,12 @@ class Credential:
         self.site_name = site_name
         self.account_name = account_name
         self.password = password
+
+    def save_credentials(self):
+
+        Credential.credential_list.append(self)
+
+    
+    def delete_credentials(self):
+
+        Credential.credential_list.remove(self)
