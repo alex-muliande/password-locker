@@ -1,8 +1,8 @@
 # Password-locker
-
+The project was done using python3.6
 
 ## Description
-we will create an amazing application that will help us manage our passwords and even generate new passwords for us..
+An application that helps us manage our passwords and even generate new passwords for us.As well as log in to our existing accouts
 
 
 ## Author
