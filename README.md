@@ -26,9 +26,11 @@ Alex Muliande.
 4.Run pythone3.6 password_locker.py to launch the program.
 
 ## Technologies used
-*Python
-*PIP
-*Pyperclip
+* Python
+
+* PIP
+
+* Pyperclip
 
 ### Support 
 
