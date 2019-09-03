@@ -238,7 +238,7 @@ def main():
             break
 
         else:
-            print("I really did'nt get that, please use the short code ")
+            print("I really did not get that, please use the short code ")
 
 print('\n')
 
