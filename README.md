@@ -23,7 +23,11 @@ Alex Muliande.
 
 3.cd into the project.
 
+<<<<<<< HEAD
 4.Run python3.6 password_locker.py to launch the program.
+=======
+4.Run pythone3.6 password_locker.py to launch the program.
+>>>>>>> b8fd76fed85a81703e42a86306134eb1a5c78550
 
 ## Technologies used
 * Python
