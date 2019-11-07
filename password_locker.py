@@ -123,7 +123,7 @@ def main():
                 break
 
             else:
-                print("Sorry I didn\'t get that. Please try again")
+                print("Sorry I did not get that. Please try again")
 
                 # password = input("Enter a password of your choice...")
 
@@ -140,7 +140,7 @@ def main():
 
         elif short_code == 'ln':
             print('\n')
-            print("Enter your account details to log in: \n Enter your username...")
+            print("Enter your account details to log in: \n Enter your first name...")
             first_name = input()
             print("Enter your password...")
             password = input()
@@ -190,7 +190,7 @@ def main():
                                 break
 
                             else:
-                                print("Sorry I didn\'t get that. Please try again")
+                                print("Sorry I did not get that. Please try again")
 
                         # return at_password
 
@@ -228,11 +228,11 @@ def main():
                     #     print('\n')
 
                     else:
-                        print("I didn\'t get that, please try again")
+                        print("I did not get that, please try again")
 
             else:
                 print(
-                    f"Sorry, we couldn\'t' find any account under the name {user_name}")
+                    f"Sorry, we could not find any account under the name {first_name}")
                 print('\n')
         elif short_code == 'ex':
             break
